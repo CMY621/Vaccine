@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  /* background: #6BD1FF; */
+  background-image: linear-gradient(125deg, #27ae60,#2980b9,#d15c4f,#8e44ad );
+  background-size: 400%;
+  animation: bganimation 15s infinite;
+
+}
+@keyframes bganimation{
+  0%{
+      background-position: 0% 50%;
+  }
+  50%{
+      background-position: 100% 50%;
+  }
+  100%{
+      background-position: 0% 50%;
+  }
+}
+.l{
+    float: left;
+}
+.r{
+    float: right;
+}
+a{
+    text-decoration: none;
+}
+
+.head{
+  width: 90%;
+  height: 5.5em;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 5%;
+  z-index: 1;
+
+}
+/* 顶部 */
+.top-bg{
+    background-color:#f8fdff;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+}
+.top{
+    margin: 0 auto;
+    overflow: hidden;
+}
+.top-l{
+  width: 20%;
+}
+.top-l>img{
+    width: 40px;
+    display: block;
+    margin: 5px auto;
+}
+.top-l p{
+    font-size: 18px;
+    text-align: center;
+}
+.top input{
+    width: 180px;
+    height: 22px;
+    border: 2px solid #286acc;
+    border-radius: 3px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+.top-r{
+  height: 5.5em;
+}
+.top-r>a{
+  display: inline-block;
+  height: 5.5em;
+  border-left: 1px solid #ccc;
+  padding: 0 0.8em;
+  color: #000;
+}
+.top-r>a>div{
+  height: 5.5em;
+  margin-top: 0.8em;
+}
+.top-r>a>div>i{
+  display: block;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.top-r>div{
+  vertical-align: middle;
+  line-height: 5.5em;
+  display: inline-block;
+  padding-left: 10px;
+}
+.top-r>div>i{
+  color: #286acc;
+  transform: translateX(-25px);
+}
+
+.top-r>a:hover{
+  background-color: #0054AA;
+  color: #fff;
+}
+
+
+/* 导航栏 */
+.nav{
+    line-height: 5.5em;
+    overflow: hidden;
+}
+
+/* 导航按钮 */
+.nav button {
+    margin: 0px 30px;
+  }
+.btn-3 {
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    line-height: 42px;
+    border: none;
+    
+}
+  .btn-3 a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: #fff;
+  }
+  .btn-3:before,
+  .btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-3:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-3:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3:hover{
+    background: transparent;
+    box-shadow: none;
+  }
+  .btn-3:hover:before {
+    height: 100%;
+  }
+  .btn-3:hover:after {
+    width: 100%;
+  }
+  .btn-3 a:hover{
+     color: rgba(2,126,251,1);
+  }
+  .btn-3 a:before,
+  .btn-3 a:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-3 a:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-3 a:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3 a:hover:before {
+    height: 100%;
+  }
+  .btn-3 a:hover:after {
+    width: 100%;
+  }
+
+  .action{
+    width: 130px;
+    line-height: 42px;
+    font-size: 15px;
+    border-radius: 5px;             
+    background-color: #f8fdff;
+    border: 3px solid rgba(2,126,251,1); 
+  }
+
+

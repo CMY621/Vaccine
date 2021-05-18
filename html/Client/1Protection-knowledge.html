@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疫情防护小知识</title>
+    <link rel="stylesheet" href="../../css/banner.css">
+    <link rel="stylesheet" href="../../css/head.css">
+    <link rel="stylesheet" href="../../css/foot.css">
+    <link rel="stylesheet" href="../../css/Protection-knowledge.css">
+    <link rel="stylesheet" href="../../css/more.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <script src="../../js/jquery-1.11.1.js"></script>
+    <script src="../../js/head_nav.js"></script>
+    <script>
+        window.onload = function (){
+            var oDiv = document.getElementById('box');
+            var oImg = oDiv.getElementsByTagName('img')[0];
+            var oImg1 = document.getElementById('little');
+            var oPrev = document.getElementById('prev');
+            var oNext = document.getElementById('next');
+            var oSpan = oDiv.getElementsByTagName('span')[0];
+            var oUl = oDiv.getElementsByTagName('ul')[0];
+            var aLi = oUl.getElementsByTagName('li');
+            var aDian = oUl.getElementsByTagName('div');
+            
+            var arr = [ '../../img/banner_1.jpg', '../../img/banner_2.jpg', '../../img/banner_3.jpg', '../../img/banner_4.jpg','../../img/banner_5.jpg','../../img/bg-index.jpg'];
+            var num = 0;
+            
+            for( var i=0; i<arr.length; i++ ){
+                aLi[i].innerHTML += '<div></div>';
+            }
+            
+            // 初始化
+            function fnTab(){
+                oImg.src = arr[num];
+                for( var i=0; i<aLi.length; i++ ){
+                    aDian[i].className = '';
+                }
+                aDian[num].className = 'act';
+            }
+            fnTab();
+            
+            //向前切换
+            oPrev.onclick = function (){
+                num --;
+                if( num == -1 ){
+                    num = arr.length-1;
+                }
+                fnTab();
+            };
+    
+            //向后切换
+            oNext.onclick = function (){
+                num ++;
+                if( num == arr.length ){
+                    num = 0;
+                }
+                fnTab();
+            };
+            
+            
+            //下面的圆点点
+    
+            for( var i=0; i<aLi.length; i++ ){
+                aLi[i].index = i;			// 索引值
+                aLi[i].onclick = function (){
+                    num = this.index;
+                    fnTab();
+                };
+                
+            }
+            
+            for( var i=0; i<aLi.length; i++ ){
+                aLi[i].onmouseover = function (){
+                    this.getElementsByTagName('img')[0].style.display = 'block';
+                };
+                aLi[i].onmouseout = function (){
+                    this.getElementsByTagName('img')[0].style.display = 'none';
+                };
+            };
+            
+            
+        };
+    </script>
+</head>
+<body>
+    <div class="head">
+        <!-- 顶部 -->
+        <div class="top-bg">
+            <div class="top">
+                <div class="top-l l">
+                    <img src="../../img/logo1.png" alt="">
+                    <p>疫苗分配管理与可视化系统</p>
+                </div>
+                
+                <div class="top-r r">
+                    <a href="4personal-home-page.html" title="个人主页" class="r">
+                        <div>
+                            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                            <span>用户中心</span>
+                        </div>
+                    </a>
+                        
+                    <div>
+                        <input type="text" placeholder="请输入搜索内容">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <!-- 导航栏 -->
+                <div class="nav r">
+                    <div>
+                        <button class="action"><a href="#">疫情防护小知识</a></button>
+                        <button class="btn-3"><a href="#">疫情速递</a></button>
+                        <button class="btn-3"><a href="#">用户讨论区</a></button>
+                        <button class="btn-3"><a href="#">个人中心</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+       
+    </div>
+    
+    <div class="content">
+        <!-- 轮播图 -->
+        <div id="box">
+            <img id="img" />
+            <p id="prev">&lt;</p>
+            <p id="next">&gt;</p>
+            <ul>
+                <li><img src="../../img/banner_1.jpg"/></li>
+                <li><img src="../../img/banner_2.jpg"/></li>
+                <li><img src="../../img/banner_3.jpg"/></li>
+                <li><img src="../../img/banner_4.jpg"/></li>
+                <li><img src="../../img/banner_5.jpg"/></li>
+                <li><img src="../../img/bg-index.jpg"/></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="title">
+                 <div class="title_1 r">
+                    <a href="#" class="">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                         &nbsp; Click to answer questions
+                    </a>
+                    <span>
+                        疫情及相关知识竞答
+                        <p>
+                            Competition on epidemic situation and related knowledge
+                        </p>
+                    </span>
+                    
+                </div>
+                <div class="title_2 l">
+                    <i class="fa fa-hand-o-down fa-3x r" aria-hidden="true"></i>
+                    <span>
+                        疫情防护及疫苗接种相关知识播报
+                        <p>
+                            Broadcast of epidemic prevention and vaccination related knowledge
+                        </p>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="knowledge">
+                <!-- 第一小块 勤洗手-->
+                <div class="block">
+                    <div class="wash">
+                        <p class="block_title">勤洗手</p>
+                        <p class="block_text">
+                            &nbsp;&nbsp;洗手是预防传染病最简便有效的措施之一。
+                            呼吸道传染病除了通过飞沫传播，也会经手接触传播，
+                            日常工作、生活中，人的手不断接触到被病毒、
+                            细菌污染的物品，如果不能及时正确洗手，
+                            手上的病毒、细菌可以通过手触摸口、眼、鼻进入人体
+                            通过洗手可以简单有效地切断这一途径，
+                            保持个人手部的清洁卫生可以有效降低患呼吸道传染病的风险。
+                        </p>
+                        <div>
+                            <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                            洗手七大步
+                        </div>
+                        <div>
+                            <img src="../../img/wash_1.gif" alt="">
+                            <img src="../../img/wash_2.gif" alt="">
+                            <img src="../../img/wash_3.gif" alt="">
+                            <img src="../../img/wash_4.gif" alt="">
+                            <img src="../../img/wash_5.gif" alt="">
+                            <img src="../../img/wash_6.gif" alt="">
+                            <img src="../../img/wash_7.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第二小块 带口罩-->
+                <div class="block">
+                    <div class="wear">
+                        <p class="block_title">带口罩</p>
+                        <p class="block_text">
+                            &nbsp; &nbsp; 如今，口罩已经成为每个人出门时的“标配”,但口罩佩戴不当
+                            很容易给病毒留下偷袭机会。据媒体报道，河北省石家庄市
+                            疫情中就有确诊患者平时一直戴着口罩为什么戴了口罩还会
+                            被感染？世界卫生组织曾提醒：仅戴口罩不足以保护你,
+                            这些“危险动作”得注意 &nbsp;<i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        </p>
+                        <div class="wear_con">
+                            <img class="l" src="../../img/wear_1.png" alt="">
+                            <div>
+                                <p>勿用手触摸口罩外侧调整位置：</p>
+                                <span>当手接触被污染的口罩外侧后再摸眼睛等部位时,可能增大感染风险</span>
+                                <p>正确方式：</p>
+                                <span>调整口罩位置时,尽量触碰口罩边缘,触碰后立即洗手</span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="wear_con">
+                            <img class="l" src="../../img/wear_2.png" alt="">
+                            <div>
+                                <p>不要不洗手就摸干净口罩：</p>
+                                <span>不洗手就摸干净口罩,很容易通过手的触摸散播病菌</span>
+                                <p>正确方式：</p>
+                                <span>佩戴口罩前要洗手,如果不方便,可用免洗洗手液代替</span>
+                            </div>
+                            
+                        </div>
+                        <div class="wear_con">
+                            <img class="l" src="../../img/wear_3.png" alt="">
+                            <div>
+                                <p>勿裸露鼻子：</p>
+                                <span>新冠病毒传播主要依靠飞沫和接触,鼻子裸露在外会增加感染风险</span>
+                                <p>正确方式：</p>
+                                <span>口罩要与鼻子轮廓贴合,金属丝部分要卡在鼻梁上塑形</span>
+                            </div>
+                            
+                        </div>
+                        <div class="wear_con">
+                            <img class="l" src="../../img/wear_4.png" alt="">
+                            <div>
+                                <p>不要把口罩拉到下巴，口鼻同时暴露：</p>
+                                <span>将口罩拉到下巴,口罩内面会被下颌处暴露区域污染,再次佩戴就可能感染病毒</span>
+                                <p>正确方式：</p>
+                                <span>需要暂时摘掉口罩时,应该将口罩整体摘下</span>
+                            </div>
+                            
+                        </div>
+                        <div class="wear_con">
+                            <img class="l" src="../../img/wear_5.png" alt="">
+                            <div>
+                                <p>摘口罩时双手勿跟口罩大面积接触：</p>
+                                <span>口罩外表面可能附着大量细菌和病毒,摘口罩时双手接触口罩外表面很容易造成接触污染</span>
+                                <p>正确方式：</p>
+                                <span>只接触口罩边缘、带子,不要接触可能被污染的口罩正面</span>
+                            </div>
+                            
+                        </div>
+                        <div class="wear_con">
+                            <img class="l" src="../../img/wear_6.png" alt="">
+                            <div>
+                                <p>打喷嚏、咳嗽时不要摘口罩：</p>
+                                <span>打喷嚏、咳嗽时摘口罩,可能将细菌、病毒传染给他人</span>
+                                <p>正确方式：</p>
+                                <span>打喷嚏和咳嗽时应用纸巾遮掩口鼻,没有纸巾或来不及的情况下使用袖肘部遮挡</span>
+                            </div>
+                            
+                        </div>
+                        <div class="wear_con">
+                            <img class="l" src="../../img/wear_7.png" alt="">
+                            <div>
+                                <p>用过的口罩不要揣口袋、放包里：</p>
+                                <span>口袋和手提包里经常放置其他物品,将用过的口罩揣口袋、放包里,很容易导致口罩沾染病原微生物,再戴时反而容易致病</span>
+                                <p>正确方式：</p>
+                                <span>外出时,准备一个单独包装袋,不佩戴时将口罩沿中间对折,外侧朝上,放进袋中</span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="wear_con">
+                            <img class="l" src="../../img/wear_8.png" alt="">
+                            <div>
+                                <p>居家时不要随意将口罩放置桌面：</p>
+                                <span>如果是在家里,将口罩哪一面朝下放在桌子上都不科学,对外一侧会污染家居环境,对内一侧会被其他物质污染</span>
+                                <p>正确方式：</p>
+                                <span>将使用过的口罩悬挂在晾衣架或墙壁挂钩上</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more">
+                    <a href="">
+                        加载更多 
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        
+    </div>
+
+    
+    
+    <div class="footer">
+        <!--Waves Container-->
+         <div>
+             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                 <defs>
+                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                 </defs>
+                 <g class="parallax">
+                 <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                 <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                 <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                 <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                 </g>
+             </svg>
+         </div>
+         <!--Waves end-->
+         <div class="foot_text">
+             <table style="border-collapse:separate; border-spacing: 0px 20px;">
+                 <tr>
+                     <td>
+                         <a href="https://sa.sogou.com/new-weball/page/sgs/epidemic?type_page=VR">
+                             全球疫情动态
+                         </a>
+                     </td>
+                     <td>
+                         <a href="http://www.yiqing.com/">
+                             疫情网
+                         </a>
+                     </td>
+                     <td>
+                         <a href="https://www.ncovchina.com/data.html">
+                             中国疫情网
+                         </a>
+                     </td>
+                     <td>
+                         <a href="https://www.shutcm.edu.cn/kyzl/5296/list.htm">
+                             上海中医药大学疫情防控
+                          </a>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                         <a href="http://www.gdqy.gov.cn/xxgk/zzjg/zfjg/qyssfj/bmdt/zxyq/">
+                             清远市疫情防控
+                         </a>
+                     </td>
+                     <td>
+                         <a href="https://kuseecn.com/a/HAIRGO7xHc0OGrm1SNTZSeEE/">
+                             地区疫情查询
+                         </a>
+                     </td>
+                     <td>
+                         <a href="http://www.chinacdc.cn/">
+                             中国疾病预防控制中心
+                         </a>
+                     </td>
+                     <td>
+                         <a href="http://nip.chinacdc.cn/">
+                             中国疫苗和免疫网
+                         </a>
+                     </td>
+                 </tr>
+             </table>
+             <p>Copyright© 2021 疫苗分配管理与可视化系统.com  All Rights Reserved.</p>
+        </div>
+     </div>
+</body>
+</html>

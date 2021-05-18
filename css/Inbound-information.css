@@ -1,0 +1,144 @@
+.top_add{
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.top_add form{
+    overflow: hidden;
+}
+.top_add form label{
+    font-size: 16px;
+}
+form input{
+    max-width: 220px;
+    height: 26px;
+    border: none;
+    color: #191F28;
+    padding: 0 10px;
+    border-radius: 8px;
+    margin-right: 40px;
+    background-color: rgb(233, 233, 233);
+}
+.add button,.top_add form button,.window button,.change button{
+    font-size: 13px;
+    border: none;
+    padding: 8px 20px; 
+    border-radius: 8px;
+    letter-spacing: 2px;
+    color: #fff;
+    transition:.5s;
+    background: linear-gradient(120deg,#4481eb,#04befe,#4481eb);
+    background-size: 300%;
+    margin-right: 10px;
+}
+.add button:hover,.top_add form button:hover,.window button:hover{
+    background-size: 100%;
+}
+
+/* 表格 */
+.tr_bg{
+    color: #fff;
+    background: linear-gradient(120deg,#4c86eb,#04befe,#4c86eb) !important;
+}
+.main{
+    width: 100%;
+    min-height: 80%;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.main table{
+    width: 100%;
+    max-height: 550px;
+    font-size: 16px;
+    color: rgb(37, 37, 37);
+    text-align: center;
+    border-spacing: 0px 15px;
+    cursor: pointer;
+}
+.main table tr{
+    height: 45px;
+    background: rgba(255, 255, 255, 0.85);
+}
+.main table tr:first-child{
+    background: none;
+    font-size: 20px;
+    color: #fff;
+    height: 20px;
+}
+.main table tr td{
+    min-width: 5px;
+    max-width: 150px;
+    text-align: center;
+}
+.main table tr td img{
+    width: 20px;
+}
+.main table tr td img:hover{
+    color: #409EFF;
+}
+
+
+
+
+.page a{
+    text-decoration: none;
+    color:#fff;
+}
+.page{
+    color: linear;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.page a,.page>span{
+    margin-right: 30px;
+}
+.page a:hover{
+    background: linear-gradient(to right, #75b6ff,#334057);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* 弹窗 */
+.window,.change{
+    display: none;
+    font-size: 16px;
+    padding: 30px 40px 80px 40px;
+    background-color: rgb(53, 50, 50, 0.95);
+    box-shadow: 20px -20px 80px 0 rgba(170, 170, 170, 0.5);
+    border-radius: 20px;
+    position: absolute;
+    left: 20%;
+    top: 0%;
+}
+.box label{
+    display: block;
+    float: left;
+    width: 80px;
+    margin: 0 auto;
+    margin-right: 20px;
+    color: rgb(216, 216, 216);
+}
+.box input{
+    width: 300px;
+    height: 35px;
+    border: none;
+    color: #191F28;
+    padding: 0 10px;
+    border-radius: 8px;
+    margin: 0 0 30px 20px;
+    background-color: rgb(233, 233, 233);
+}
+.box form{
+    position: relative;
+}
+.confirm1,.confirm2{
+    position: absolute;
+    left: 25%;
+}
+.cancle1,.cancle2{
+    position: absolute;
+    right: 25%;
+}

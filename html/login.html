@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+    <div class="contanier">
+        <div class="login">
+
+            <div class="top">
+                <a href="../index.html"><<返回首页</a>
+                <p>Login</p>
+
+                <div style="width:400px;">
+                    <ul class="nav nav-tabs" style="width:400px;">
+                        <li class="active"><a href="#a2" data-toggle="tab">普通用户</a></li>
+                        <li><a href="#b2" data-toggle="tab">管理员</a></li>
+                    </ul>
+                    <ul class="tab-content">
+                        <li id="a2" class="tab-pane fade in active">
+                            <form action=" " method="POST">
+                                <label>用户名:</label><input type="text" class="form-control">
+                                <label>密码:</label><input type="password" class="form-control">
+                                <a href="register.html" class="r">未有账号，点击注册>></a>
+                                <br>
+                                <input type="button" value="点击登录" class="btn-log">
+                            </form>
+                        </li>
+                        <li id="b2" class="tab-pane fade">
+                            <form action="" method="POST">
+                                <label>用户名:</label><input type="text" class="form-control">
+                                <label>密码:</label><input type="password" class="form-control">
+                                <a href="register.html" class="r">未有账号，点击注册>></a>
+                                <br>
+                                <input type="button" value="点击登录" class="btn-log">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</body>
+</html>

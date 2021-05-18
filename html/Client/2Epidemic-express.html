@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疫情速递</title>
+    <link rel="stylesheet" href="../../css/Epidemic-express.css">
+    <link rel="stylesheet" href="../../css/common-use.css">
+    <link rel="stylesheet" href="../../css/more.css">
+    <link rel="stylesheet" href="../../css/head.css">
+    <link rel="stylesheet" href="../../css/foot.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <script src="../../js/jquery-1.11.1.js"></script>
+    <script src="../../js/head_nav.js"></script>
+    
+</head>
+<body>
+    <div class="head">
+        <!-- 顶部 -->
+        <div class="top-bg">
+            <div class="top">
+                <div class="top-l l">
+                    <img src="../../img/logo1.png" alt="">
+                    <p>疫苗分配管理与可视化系统</p>
+                </div>
+                
+                <div class="top-r r">
+                    <a href="4personal-home-page.html" title="个人主页" class="r">
+                        <div>
+                            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                            <span>用户中心</span>
+                        </div>
+                    </a>
+                        
+                    <div>
+                        <input type="text" placeholder="请输入搜索内容">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <!-- 导航栏 -->
+                <div class="nav r">
+                    <div>
+                        <button class="btn-3"><a href="#">疫情防护小知识</a></button>
+                        <button class="action"><a href="#">疫情速递</a></button>
+                        <button class="btn-3"><a href="#">用户讨论区</a></button>
+                        <button class="btn-3"><a href="#">个人中心</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="content">
+        <div class="con-top">
+            <div>
+                <a href="#">首页</a>
+                &gt; 疫情速递
+            </div>
+            <p>实时关注疫情消息</p>
+            <span>Pay attention to epidemic news in real time...</span>
+        </div>
+        <marquee behavior="" direction="left" scrollamount="8">attention</marquee>
+        
+        <!-- echart -->
+        <div class="title">
+            <div>
+                <img class="r" src="../../img/jt_down.png" alt="">
+                <p>疫情及疫苗情况</p>
+                <span>Visualization of epidemic situation and vaccine...</span>
+            </div>
+            
+        </div>
+        <div class="echart">
+            <div class="Visual">
+                <p>国内疫情情况</p>
+                <div class="Vis_data">
+                    <ul>
+                        <li>
+                            <p class="red">101316</p>
+                            <p>累计确诊</p>
+                            <p>昨日<span class="red">+44</span></p>
+                        </li>
+                        <li>
+                            <p class="green">94729</p>
+                            <p>现有治愈</p>
+                            <p>昨日<span class="green">+132</span></p>
+                        </li>
+                        <li>
+                            <p class="yell">3</p>
+                            <p>现有疑似</p>
+                            <p>昨日<span class="yell">+0</span></p>
+                        </li>
+                        <li>
+                            <p class="grey">4813</p>
+                            <p>现有死亡</p>
+                            <p>昨日<span class="grey">+0</span></p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p class="ared">17156</p>
+                            <p>现有确诊</p>
+                            <p>昨日<span class="ared">-88</span></p>
+                        </li>
+                        <li>
+                            <p class="ared">639</p>
+                            <p>无症状感染者</p>
+                            <p>昨日<span class="ared">+16</span></p>
+                        </li>
+                        <li>
+                            <p class="yell">4804</p>
+                            <p>境外输入</p>
+                            <p>昨日<span class="yell">+14</span></p>
+                        </li>
+                        <li>
+                            <p class="purple">20</p>
+                            <p>现有重症</p>
+                            <p>昨日<span class="purple">-5</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <iframe height="600px" src="Epidemic-distribution.html" frameborder="0"></iframe>
+            </div>
+
+            <div class="epi">
+                <p>疫苗数量及投放地区情况</p>
+                <div class="inbound">
+                    <p>系统入库疫苗统计量</p>
+                    <iframe height="650px" src="Inbound-statistics.html" frameborder="0"></iframe>
+                </div>
+                <div class="remain">
+                    <p>系统疫苗剩余量</p>
+                    <iframe height="650px" src="Residual-amount-of-vaccine.html" frameborder="0"></iframe>
+                </div>
+                <div class="area">
+                    <p>疫苗已投放地区及数量预览</p>
+                    <iframe height="550px" src="Released-area.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 速递消息 -->
+        <div class="title">
+            <div>
+                <img class="r" src="../../img/jt_down.png" alt="">
+                <p>疫情速递</p>
+                <span>Pay attention to epidemic news in real time...</span>
+            </div>
+            
+        </div>
+
+        
+
+        <div class="main">
+            <div class="block">
+                <img class="l" src="../../img/news_1.jpeg" alt="">
+                <div class="blo_con r">
+                    <span>2月8日深圳疫情最新消息 新增2例境外输入无症状感染者 </span>
+                    <p>2月7日0-24时，深圳新增2例境外输入无症状感染者。
+                        2例境外输入无症状感染者均为中国籍，男性，分别从
+                        坦桑尼亚、尼日利亚抵深。入境后即被集中隔离，
+                        后转至深圳市第三人民医院应急院区观察治疗，情况稳定...
+                    </p>
+                    <div>
+                        <span>2021-02-08</span>
+                        <a href="https://www.sohu.com/a/449397583_100191048" class="r">
+                            去了解详情
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="block">
+                <img class="r" src="../../img/news_2.jfif" alt="">
+                <div class="blo_con l">
+                    <span>多地疫情让人忧心，2个好消息传来，专家作出最新研判，放心了</span>
+                    <p>国家卫健委14日发布消息称，1月13日0到24时，31个省（自治区、直辖市）
+                        和新疆生产建设兵团报告新增确诊病例138例，其中境外输入病例14例，
+                        本土病例124例（河北81例，黑龙江43例），无新增疑似病例。...
+                    </p>
+                    <div>
+                        <span>2021-02-08</span>
+                        <a href="https://www.163.com/dy/article/G28G9E1R0542OR9Y.html" class="r">
+                            去了解详情
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="block">
+                <img class="l" src="../../img/news_3.png" alt="">
+                <div class="blo_con r">
+                    <span>澳门将为本地居民免费接种新冠疫苗 非澳门居民可自费接种</span>
+                    <p>澳门特区政府公报8日刊登行政长官批示，核准《澳门特别行政区防疫接种
+                        特别计划》。根据这一计划，所有澳门居民可免费接种新冠疫苗，其他依
+                        法逗留的非澳门居民可自费接种疫苗，接种费用为250澳门元。该批示
+                        自公布次日起生效...
+                    </p>
+                    <div>
+                        <span>2021-02-08</span>
+                        <a href="http://m.news.cctv.com/2021/02/08/ARTIq749pXfIg3qHScUi5YQ0210208.shtml" class="r">
+                            去了解详情
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="block">
+                <img class="r" src="../../img/news_4.jpeg" alt="">
+                <div class="blo_con l">
+                    <span>香港政府完成三处强制检测 鰂鱼涌和红磡共发现4例确诊病例</span>
+                    <p>香港政府2月7日晚将红磡、旺角、鰂鱼涌3个地方的部分区域列为“受限区域”，
+                        3个地方的新冠病毒检测行动于今天（8日）早上先后完成。其中在鰂鱼涌英
+                        皇道惠利大厦和红磡必嘉街长乐大厦的检测行动，分别找到3例和1例确诊病
+                        例...
+                    </p>
+                    <div>
+                        <span>2021-02-08</span>
+                        <a href="http://m.news.cctv.com/2021/02/08/ARTIVxQHTPIVFvt8hucID334210208.shtml" class="r">
+                            去了解详情
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="block">
+                <img class="l" src="../../img/news_5.jpg" alt="">
+                <div class="blo_con r">
+                    <span>国家卫健委：昨日新增11例确诊病例 其中本土病例1例（在吉林）</span>
+                    <p>2月6日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊
+                        病例11例，其中境外输入病例10例（上海3例，北京2例，江苏2例，广东2例，
+                        湖南1例），本土病例1例（在吉林）；无新增死亡病例；新增疑似病例2例，
+                        均为境外输入病例（均在上海）...
+                    </p>
+                    <div>
+                        <span>2021-02-07</span>
+                        <a href="http://m.news.cctv.com/2021/02/07/ARTISYSCidNdHfef9pDy1i2E210207.shtml" class="r">
+                            去了解详情
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="block">
+                <img class="r" src="../../img/news_6.jpg" alt="">
+                <div class="blo_con l">
+                    <span>外省回河南最新隔离规定_河南在外人员返乡规定_河南疫情2021返乡通知</span>
+                    <p>外省回河南最新隔离规定：鼓励大家在工作地休假。各地政府要加大宣传力度，
+                        鼓励企事业单位根据生产、工作情况和职工意愿，灵活安排休假，引导职工群
+                        众在春节期间尽量在工作地休假，做好留在工作地的职工春节期间保障工作。
+                        为春节期间加班的职工依法支付加班工资和调休...
+                    </p>
+                    <div>
+                        <span>2021-02-06</span>
+                        <a href="https://news.duote.com/202101/226370.html" class="r">
+                            去了解详情
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="more">
+                <a href="">
+                    加载更多 
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="footer">
+        <!--Waves Container-->
+         <div>
+             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                 <defs>
+                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                 </defs>
+                 <g class="parallax">
+                 <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                 <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                 <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                 <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                 </g>
+             </svg>
+         </div>
+         <!--Waves end-->
+         <div class="foot_text">
+             <table style="border-collapse:separate; border-spacing: 0px 20px;">
+                 <tr>
+                     <td>
+                         <a href="https://sa.sogou.com/new-weball/page/sgs/epidemic?type_page=VR">
+                             全球疫情动态
+                         </a>
+                     </td>
+                     <td>
+                         <a href="http://www.yiqing.com/">
+                             疫情网
+                         </a>
+                     </td>
+                     <td>
+                         <a href="https://www.ncovchina.com/data.html">
+                             中国疫情网
+                         </a>
+                     </td>
+                     <td>
+                         <a href="https://www.shutcm.edu.cn/kyzl/5296/list.htm">
+                             上海中医药大学疫情防控
+                          </a>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                         <a href="http://www.gdqy.gov.cn/xxgk/zzjg/zfjg/qyssfj/bmdt/zxyq/">
+                             清远市疫情防控
+                         </a>
+                     </td>
+                     <td>
+                         <a href="https://kuseecn.com/a/HAIRGO7xHc0OGrm1SNTZSeEE/">
+                             地区疫情查询
+                         </a>
+                     </td>
+                     <td>
+                         <a href="http://www.chinacdc.cn/">
+                             中国疾病预防控制中心
+                         </a>
+                     </td>
+                     <td>
+                         <a href="http://nip.chinacdc.cn/">
+                             中国疫苗和免疫网
+                         </a>
+                     </td>
+                 </tr>
+             </table>
+             <p>Copyright© 2021 疫苗分配管理与可视化系统.com  All Rights Reserved.</p>
+        </div>
+     </div>
+</body>
+</html>

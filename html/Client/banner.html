@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="../../css/banner.css">
+<link rel="stylesheet" href="../../css/font-awesome.min.css">
+<style>
+	
+</style>
+<script>
+	window.onload = function (){
+		var oDiv = document.getElementById('box');
+		var oImg = oDiv.getElementsByTagName('img')[0];
+		var oImg1 = document.getElementById('little');
+		var oPrev = document.getElementById('prev');
+		var oNext = document.getElementById('next');
+		var oSpan = oDiv.getElementsByTagName('span')[0];
+		var oUl = oDiv.getElementsByTagName('ul')[0];
+		var aLi = oUl.getElementsByTagName('li');
+		var aDian = oUl.getElementsByTagName('div');
+		
+		var arr = [ '../../img/banner_1.jpg', '../../img/banner_2.jpg', '../../img/banner_3.jpg', '../../img/banner_4.jpg','../../img/banner_5.jpg','../../img/bg-index.jpg'];
+		var num = 0;
+		
+		for( var i=0; i<arr.length; i++ ){
+			aLi[i].innerHTML += '<div></div>';
+		}
+		
+		// 初始化
+		function fnTab(){
+			oImg.src = arr[num];
+			for( var i=0; i<aLi.length; i++ ){
+				aDian[i].className = '';
+			}
+			aDian[num].className = 'active';
+		}
+		fnTab();
+		
+		//向前切换
+		oPrev.onclick = function (){
+			num --;
+			if( num == -1 ){
+				num = arr.length-1;
+			}
+			fnTab();
+		};
+
+		//向后切换
+		oNext.onclick = function (){
+			num ++;
+			if( num == arr.length ){
+				num = 0;
+			}
+			fnTab();
+		};
+		
+		
+		//下面的圆点点
+
+		for( var i=0; i<aLi.length; i++ ){
+			aLi[i].index = i;			// 索引值
+			aLi[i].onclick = function (){
+				num = this.index;
+				fnTab();
+			};
+			
+		}
+		
+		for( var i=0; i<aLi.length; i++ ){
+			aLi[i].onmouseover = function (){
+				this.getElementsByTagName('img')[0].style.display = 'block';
+			};
+			aLi[i].onmouseout = function (){
+				this.getElementsByTagName('img')[0].style.display = 'none';
+			};
+		};
+		
+		
+	};
+</script>
+</head>
+
+<body>
+
+	<div id="box">
+		<img id="img" />
+		<p id="prev">&lt;</p>
+		<p id="next">&gt;</p>
+		<ul>
+			<li><img src="../../img/banner_1.jpg"/></li>
+			<li><img src="../../img/banner_2.jpg"/></li>
+			<li><img src="../../img/banner_3.jpg"/></li>
+			<li><img src="../../img/banner_4.jpg"/></li>
+			<li><img src="../../img/banner_5.jpg"/></li>
+			<li><img src="../../img/bg-index.jpg"/></li>
+		</ul>
+	</div>
+</body>
+</html>

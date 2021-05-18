@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入库统计</title>
+    <link rel="stylesheet" href="../../css/Residual-amount-of-vaccine.css">
+    <link rel="stylesheet" href="../../css/Acommon-use.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+</head>
+<body>
+    <div class="content">
+        <div class="top">
+            <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+            &nbsp; 疫苗剩余量
+            <div></div>
+        </div>
+
+        <div class="echart">
+            
+            <div id="main1" class="l"></div>
+
+
+            <script type="text/javascript" src="../../js/echarts.min.js"></script>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart1 = echarts.init(document.getElementById('main1'));
+        
+                // 指定图表的配置项和数据
+                var option1 = {
+                    title: {
+                        text: '剩余疫苗数量',
+                        textStyle: {
+                            color: '#ccc'
+                        }
+                    },
+                    tooltip: {},
+                    legend: {
+                        data:['数量'],
+                        textStyle: {
+                            color: '#ccc'
+                        },
+                        
+                    },
+                    xAxis: {
+                        data: ["减毒疫苗","腺病毒载体疫苗","核酸疫苗"," 灭活疫苗","COVID-19"],
+                        axisLabel: {
+                            textStyle: {
+                                color: '#ccc'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        axisLabel: {
+                            textStyle: {
+                                color: '#ccc'
+                            }
+                        }
+                    },
+                    series: [{
+                        name: '数量',
+                        type: 'bar',
+                        data: [450, 350, 800, 580, 620],
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#83bff6'},
+                                    {offset: 0.5, color: '#188df0'},
+                                    {offset: 1, color: '#188df0'}
+                                ]
+                            )
+                        },
+                        emphasis: {
+                            itemStyle: {
+                                color: new echarts.graphic.LinearGradient(
+                                    0, 0, 0, 1,
+                                    [
+                                        {offset: 0, color: '#2378f7'},
+                                        {offset: 0.7, color: '#2378f7'},
+                                        {offset: 1, color: '#83bff6'}
+                                    ]
+                                )
+                            }
+                        }
+                    }]
+
+
+                };
+                
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart1.setOption(option1);
+            </script>
+
+
+        </div>
+    </div>
+</body>
+</html>

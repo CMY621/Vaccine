@@ -1,0 +1,12 @@
+
+/* 图表 */
+.echart{
+    margin-top: 80px;
+    padding: 0 40px;
+    overflow: hidden;
+}
+.echart>div{
+    width: 45%;
+    height: 500px;
+    color: #fff;
+}

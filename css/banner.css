@@ -1,0 +1,79 @@
+#box{
+    width: 90%;
+    height: 35em;
+    margin: 180px auto;
+    background-color: #F3F3EB;
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    15px 15px 20px 0px rgba(0,0,0,.1), 
+    8px 8px 5px 0px rgba(0,0,0,.1);
+    position: relative;
+}
+
+#img{ 
+    width: 94%;
+    height: 96%;
+    object-fit:cover;
+    display: block;
+    margin: 0 auto;
+}
+#box p{
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    background: #f8fdff;
+    border-radius: 50%;
+    color:#0054AA;
+    text-align: center;
+    line-height: 72px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 3px 20px 0px #8c8c8c;
+    position: absolute; 
+    top: 40%
+}
+#box p:hover { 
+    background-color:  #0054AA;
+    color: #fff;
+    transition: all 0.8s;
+}
+#prev { 
+    left:20px; 
+}
+#next { 
+    right:20px; 
+}
+#box ul{
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform:translateX(-90px);
+}
+#box ul li div{
+    width: 10px; 
+    height: 10px;
+    border-radius: 50px; 
+    background-color: #fff;
+    box-shadow: 0px 3px 20px 0px #8c8c8c;
+    list-style: none;
+    margin-left: 20px;
+}
+#box ul li img{
+    width: 60px;
+}
+.act{
+    background-color: #0054AA !important;
+}
+#box ul li{
+    list-style: none; 
+    position: relative;
+    float: left;
+}
+#box ul li img{
+    display: none;
+    position: absolute;
+    bottom: 15px; 
+}

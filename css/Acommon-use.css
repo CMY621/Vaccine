@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.l{
+    float: left;
+}
+.r{
+    float: right;
+}
+body{
+    color: #dfdddd;
+}
+.content{
+    overflow: hidden;
+    padding: 10px 30px;
+}
+
+.top{
+    font-size: 25px;
+    color: #fff;
+}
+.top>div{
+    border-top: 1px solid #fff;
+    margin-top: 10px;
+}
+p{
+    cursor: pointer;
+    margin-right: 50px;
+}
+.fa-envelope:hover,p:hover{
+    color: #4481eb;
+}

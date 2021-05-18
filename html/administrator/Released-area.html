@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+    <link rel="stylesheet" href="../../css/Epidemic-distribution.css">
+    <link rel="stylesheet" href="../../css/Acommon-use.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+</head>
+<body>
+    <div class="content">
+        
+        <div class="top">
+            <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+            &nbsp; 疫苗已投放地区预览
+            <div></div>
+        </div>
+        
+        <div class="echart">
+            <div id="main"></div>
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="../../js/echarts.min.js"></script>
+    <script type="text/javascript" src="../../js/china.js"></script>
+    <script type="text/javascript" src="../../js/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        var airData = [
+            { name: '北京', value: 15000 },
+            { name: '天津', value: 12454 },
+            { name: '上海', value: 12101 },
+            { name: '重庆', value: 12545 },
+            { name: '河北', value: 18724 },
+            { name: '河南', value: 2525 },
+            { name: '云南', value: 8554 },
+            { name: '辽宁', value: 4585 },
+            { name: '黑龙江', value: 10233 },
+            { name: '湖南', value: 4244 },
+            { name: '安徽', value: 14458 },
+            { name: '山东', value: 10445 },
+            { name: '新疆', value: 4757 },
+            { name: '江苏', value: 4423 },
+            { name: '浙江', value: 7885 },
+            { name: '江西', value: 5621 },
+            { name: '湖北', value: 15000 },
+            { name: '广西', value: 4532 },
+            { name: '甘肃', value: 2455 },
+            { name: '山西', value: 8754 },
+            { name: '内蒙古', value:7758 },
+            { name: '陕西', value: 1435 },
+            { name: '吉林', value: 4644 },
+            { name: '福建', value: 5552 },
+            { name: '贵州', value: 4244 },
+            { name: '广东', value: 2365 },
+            { name: '青海', value: 7544 },
+            { name: '西藏', value: 6555 },
+            { name: '四川', value: 5657 },
+            { name: '宁夏', value: 10344 },
+            { name: '海南', value: 8758 },
+            { name: '台湾', value: 9864 },
+            { name: '香港', value: 9877 },
+            { name: '澳门', value: 5687 },
+            { name: '南海诸岛', value: 4002 }
+        ]
+        var scatterData = [
+            {
+                value: [117.283042, 31.86119]
+            }
+        ]
+        // 基于准备好的dom，初始化echarts实例
+        let container = document.getElementById('main')
+        var myChart = echarts.init(container)
+        
+        
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: "全国疫苗投放地区",
+                left: "center",
+                textStyle: {
+                    fontSize: 28,
+                    color: '#fff'
+                },
+            },
+            label: {
+                
+            },
+            geo: {
+                type: 'map',
+                map: 'chinaMap',
+                roam: true,
+                label: {
+                    
+                },
+                zoom: 3
+            },
+            tooltip: {
+                formatter:{
+                    
+                } 
+            },
+            visualMap: {
+                min: 0,
+                max: 20000,
+                textStyle: {
+                    color: '#fff'
+                },
+                inRange: {
+                    color: ['white', '#0052d4'] // 控制颜色渐变的范围
+                },
+                calculable: true // 出现滑块
+            },
+            
+            series: [
+                {
+                    name:"已投放数量",
+                    type:"map",
+                    map:"china",
+                    data: airData
+                },
+            ]
+        };
+    
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    
+        
+    </script>
+</body>
+</html>

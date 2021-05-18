@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.l{
+    float: left;
+}
+.r{
+    float: right;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/bg-index1.jpg);
+    background-size: cover;
+}
+.nav{
+    width: 80%;
+    height: 60px;
+    line-height: 60px;
+    margin: 20px auto;
+}
+.nav-l span{
+    font-size: 30px;
+    color: #fff;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.nav-r{
+    font-size: 17px;
+    justify-content: space-around;
+}
+.nav-r a{
+    position: relative; 
+    padding: 8px 20px; 
+    text-decoration: none;
+    border-radius: 5%;
+    margin: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+    transition:.5s;
+    background: linear-gradient(120deg,#4481eb,#04befe,#4481eb);
+    background-size: 200%;
+}
+.nav-r a:hover{
+    background-position: right; 
+    transform: translateY(-15px);
+}
+.nav-r a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+.nav-r a::before{
+    content: "";
+    position: absolute ;
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+}
+.content_p{
+    margin-top: 8%;
+}
+.content_p p{
+    background: linear-gradient(to right,#3c80f7,#ffffff);
+        -webkit-background-clip: text;
+        color: transparent;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+.pic{
+    position: absolute;
+    top: 30%;
+    right: 12%;
+}
+
+.foot{
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.foot p{
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}

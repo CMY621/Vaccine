@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入库信息</title>
+    <link rel="stylesheet" href="../../css/Inbound-information.css">
+    <link rel="stylesheet" href="../../css/Acommon-use.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <script src="../../js/jquery-1.11.1.js"></script>
+    <script src="../../js/pop-up-window.js"></script>
+</head>
+<body>
+    <div class="content">
+
+        <div class="top">
+            <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+            &nbsp; 出库信息管理
+            <div></div>
+        </div>
+
+        <div class="top_add">
+            <div class="add r">
+                <button class="r btn-add"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;添加<tton>
+                <button class="r"><i class="fa fa-search" aria-hidden="true"></i>查询<tton>
+            </div>
+            <form action="/entry/getSome" method="get">
+                <label for="">疫苗名称：</label>
+                <input type="text" placeholder="输入疫苗名称" id="yname" name="yname">
+                <label for="">来源地：</label>
+                <input type="text"  placeholder="输入来源地" id="ysource" name="ysource">
+                <label for="">规格：</label>
+                <input type="text"  placeholder="输入规格" id="yspec" name="yspec">
+            </form>
+        </div>
+
+        <div class="main">
+            <table cellspacing="0" cellpadding="0" >
+                <tr>
+                    <td>编号</td>
+                    <td>疫苗名称</td>
+                    <td>来源地</td>
+                    <td>规格</td>
+                    <td>生产批号</td>
+                    <td>生产日期</td>
+                    <td>有效期</td>
+                    <td>入库数量</td>
+                    <td>操作</td>
+                </tr>
+                <tr>
+                    <td>1010</td>
+                    <td>减毒疫苗</td>
+                    <td>河北省</td>
+                    <td>2ml</td>
+                    <td>VF19486</td>
+                    <td>2020-12-01</td>
+                    <td>3个月</td>
+                    <td>200支</td>
+                    <td>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1252</td>
+                    <td>COVID-19</td>
+                    <td>湖南省</td>
+                    <td>1.5ml</td>
+                    <td>NG58693</td>
+                    <td>2020-11-15</td>
+                    <td>6个月</td>
+                    <td>300支</td>
+                    <td>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2452</td>
+                    <td>减毒疫苗</td>
+                    <td>江西省</td>
+                    <td>1.5ml</td>
+                    <td>KJ56920</td>
+                    <td>2020-10-23</td>
+                    <td>6个月</td>
+                    <td>50支</td>
+                    <td>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4245</td>
+                    <td>腺病毒载体疫苗</td>
+                    <td>贵州省</td>
+                    <td>2ml</td>
+                    <td>UI96302</td>
+                    <td>2020-09-20</td>
+                    <td>6个月</td>
+                    <td>20支</td>
+                    <td>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7840</td>
+                    <td>灭活疫苗</td>
+                    <td>云南省</td>
+                    <td>1.5ml</td>
+                    <td>OR45602</td>
+                    <td>2020-08-20</td>
+                    <td>3个月</td>
+                    <td>150支</td>
+                    <td>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1544</td>
+                    <td>核酸疫苗</td>
+                    <td>广西省</td>
+                    <td>2ml</td>
+                    <td>LM32230</td>
+                    <td>2020-08-03</td>
+                    <td>6个月</td>
+                    <td>80支</td>
+                    <td>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5545</td>
+                    <td>减毒疫苗</td>
+                    <td>海南省</td>
+                    <td>1.5ml</td>
+                    <td>YH63205</td>
+                    <td>2020-06-26</td>
+                    <td>3个月</td>
+                    <td>100支</td>
+                    <td>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="page">
+            <a href="#">上一页</a>
+            <a href="#">下一页</a>
+            <span>当前第<span>n</span>页</span>
+            <span>每页8条</span>
+            
+        </div>
+
+        <div class="window">
+            <form action="">
+                <div class="box">
+                    <label for="">编号：</label>
+                    <input type="text" placeholder="请输入编号"><br>
+                    <label for="">疫苗名称：</label>
+                    <input type="text" placeholder="请输入疫苗名称"><br>
+                    
+                    <label for="">运送地：</label>
+                    <input type="text" placeholder="请输入来源地"><br>
+                    <label for="">规格：</label>
+                    <input type="text" placeholder="请输入规格"><br> 
+                    
+                    <label for="">生产批号：</label>
+                    <input type="text" placeholder="请输入生产批号"><br>
+                    <label for="">生产日期：</label>
+                    <input type="text" placeholder="请输入生产日期"><br> 
+                    
+                    <label for="">有效期：</label>
+                    <input type="text" placeholder="请输入有效期"><br>
+                    <label for="">出库数量：</label>
+                    <input type="text" placeholder="请输入入库数量"><br> 
+                </div>
+                <button class="confirm1">确认</button>
+            </form>
+            <button class="cancle1">取消</button>
+        </div>
+        <div class="change">
+            <form action="">
+                <div class="box">
+                    <label for="">编号：</label>
+                    <input type="text" placeholder="请输入编号"><br>
+                    <label for="">疫苗名称：</label>
+                    <input type="text" placeholder="请输入疫苗名称"><br>
+                    
+                    <label for="">运送地：</label>
+                    <input type="text" placeholder="请输入来源地"><br>
+                    <label for="">规格：</label>
+                    <input type="text" placeholder="请输入规格"><br> 
+                    
+                    <label for="">生产批号：</label>
+                    <input type="text" placeholder="请输入生产批号"><br>
+                    <label for="">生产日期：</label>
+                    <input type="text" placeholder="请输入生产日期"><br> 
+                    
+                    <label for="">有效期：</label>
+                    <input type="text" placeholder="请输入有效期"><br>
+                    <label for="">出库数量：</label>
+                    <input type="text" placeholder="请输入入库数量"><br> 
+                </div>
+                <button class="confirm2">确认</button>
+            </form>
+            <button class="cancle2">取消</button>
+        </div>
+
+
+    </div>
+</body>
+</html>

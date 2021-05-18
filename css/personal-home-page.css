@@ -1,0 +1,98 @@
+
+
+
+.block{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f8fdff;
+    box-shadow: 0px 3px 20px 0px #8c8c8c;
+    padding: 40px 0;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+.block>div{
+    width: 80%;
+    margin: 0 auto;
+}
+.blo_left{
+    width: 20%;
+
+}
+.blo_left img{
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+.blo_left input,.sub{
+    font-size: 12px;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    letter-spacing: 5px;
+    color: #fff;
+    transition: .5s;
+    background: linear-gradient(120deg,#4481eb,#04befe,#4481eb);
+    background-size: 300%;
+    display: block;
+    margin: 20px auto;
+}
+.blo_left input:hover,.sub:hover{
+    background-size: 100%;
+}
+
+
+
+.blo_right{
+    width: 76%;
+    border-radius: 10px;
+    padding: 20px 0;
+    background-color: rgba(237,161,143, 0.5);
+}
+.blo_right p{
+    font-size: 15px;
+    font-weight: 520;
+    letter-spacing: 4px;
+    margin-left: 20px;
+}
+.blo_right table{
+    margin: 50px auto;
+    font-size: 13px;
+}
+.blo_right table tr td{
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #808080;
+}
+.basic table{
+    width: 60%;
+}
+.basic table tr td{
+    width: 50%;
+}
+.exchange table{
+    width: 70%;
+}
+.exchange table tr td:nth-of-type(1){
+    width: 15%;
+}
+.exchange table input{
+    width: 40%;
+    height: 2em;
+    border-radius: 4px;
+    border: 1px solid #3183FB;
+}
+.exchange table select{
+    width: 120px;
+    color: #505050;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 10px;
+    appearance:none;
+    border: 1px solid #3183FB;
+    height: 2em;
+    background: url("../img/select.png") no-repeat scroll right center transparent;
+}
+.exchange table textarea{
+    width: 90%;
+    height: 4em;
+    border: 1px solid #3183FB;
+}

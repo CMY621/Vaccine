@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.l{
+    float: left;
+}
+.r{
+    float: right;
+}
+a{
+    text-decoration: none;
+}
+.content{
+    margin-bottom: 50px;
+}
+/* main */
+.main{
+    width: 100%;
+}
+.title>div{
+    width: 85%;
+    background-color: #f8fdff;
+    box-shadow: 0px 3px 20px 0px #8c8c8c;
+    padding: 30px 0;
+}
+.title span{
+    font-size: 26px;
+    color: #0054AA;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.title span p{
+    font-size: 20px;
+    color: #9b9b9b;
+    padding: 20px 0;
+}
+.title{
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+/* 知识竞答 */
+.title_1{
+    display: block;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.title_1 span{
+    float: right;
+    text-align: right;
+}
+.title_1 span{
+    margin-right: 100px;
+}
+.title_1 a{
+    display: inline-block;
+    color: #fff;
+    background-color: #0054AA;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 25px 0 0 150px;
+}
+/* 防护小知识 */
+.title_2{
+    margin: 150px 0 80px 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.title_2 i{
+    color: #0054AA;
+    margin: 25px 250px 0 0;
+}
+.title_2 span{
+    margin-left: 100px;
+}
+.title_2 p{
+    margin-left: 100px;
+}
+
+
+.knowledge{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #F3F3EB;
+    box-shadow: 0px 3px 20px 0px #8c8c8c;
+    padding: 80px 0;
+}
+
+.block{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    color: rgb(97, 97, 97);
+    border-radius: 10px;
+    padding: 50px 50px;
+    background-color: #f8fdff;
+    margin-bottom: 100px;
+    box-shadow: 0 0 0.9em 0.1em rgba(0, 0, 0, 0.12);
+}
+.block_title{
+    font-size: 34px;
+    font-weight: 620;
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 20px 0;
+}
+.block_text{
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    margin-bottom: 50px;
+}
+
+
+/* 第一小块 勤洗手 */
+.wash p:nth-child(1){
+    color: #FABD6F;
+}
+.wash div:nth-child(3){
+    font-size: 20px;
+    text-align: center;
+}
+.wash img{
+    width: 33%;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+.wash img:hover{
+    box-shadow: 0 0 0.9em 0.1em rgba(0, 0, 0, 0.12);
+    transition: all 0.8s;
+}
+
+/* 带口罩 */
+.wear p:nth-child(1){
+    color: #e99582;
+}
+.wear i{
+    color: #FF0000;
+}
+.wear_con{
+    width: 86%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px dashed #000;
+    background-color: #fff;
+    margin-top: 30px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.wear_con:hover{
+    border: none;
+    box-shadow: 0 0 0.9em 0.1em rgba(0, 0, 0, 0.12);
+}
+.wear_con img{
+    display: block;
+    width: 30%;
+    margin: 0 50px 0 20px;
+    flex-shrink:0;
+}
+.wear_con p{
+    color: #e99582;
+    margin-bottom: 10px;
+}
+.wear_con div p:nth-child(3){
+    margin-top: 20px;
+}

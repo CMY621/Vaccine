@@ -1,0 +1,112 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.l{
+    float: left;
+}
+.r{
+    float: right;
+}
+.top-l img,.top-l span,.top-r img,.top-r span{
+    vertical-align: middle;
+    line-height: 50px;
+}
+body{
+    background: rgba(64,158,255, 0.5);
+}
+.content{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 头部 */
+.con-top{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background-color: #191F28;
+}
+.top-l{
+    margin-left: 40px;
+}
+.top-r{
+    margin-right: 40px;
+}
+.top-l span,.top-r span{
+    font-size: 20px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* 左侧导航栏 */
+.con-left{
+    width: 15%;
+    height: 91%;
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    background-color: #191F28;
+    border-radius: 20px;
+}
+.nav-menu a{
+    text-decoration: none;
+    display: block;
+}
+.nav-title{
+    padding: 40px 40px 0 40px;
+}
+.nav-title a{
+    color: #fff;
+    font-size: 18px;
+    height: 38px;
+}
+.nav-content a{
+    color: #CCC;
+    font-size: 16px;
+    height: 60px;
+    line-height: 40px;
+}
+.nav-content{
+    background-color: #0c1119;
+    padding-left: 50px;
+}
+.nav-content a:hover{
+    color: #fff;
+}
+
+/* 点击后 */
+.white{
+    color: #409EFF !important;
+    font-size: 18px !important;
+}
+
+
+/* 旋转前 */
+.rotate{
+    transform:rotate(0);
+    transition:all 0.3s linear;
+    -webkit-transform:rotate(0);
+    -webkit-transtion:all 0.3s linear;
+}
+/* 旋转后 */
+.rotate1{ 
+    transform:rotate(180deg);
+    transition:all 0.3s linear;
+    -webkit-transform: rotate(180deg); 
+    -webkit-transtion:all 0.3s linear;
+}
+
+/* 右侧内容 */
+.con-right{
+    width: 80%;
+    height: 91%;
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+    background-color: #191F28;
+    border-radius: 10px;
+}

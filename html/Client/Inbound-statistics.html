@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入库统计</title>
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <style>
+        .l{
+            float: left;
+        }
+        .r{
+            float: right;
+        }
+        .echart{
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 80px;
+            overflow: hidden;
+        }
+        .echart>div{
+            width: 500px;
+            height: 500px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+
+        <div class="echart">
+            
+            <div id="main1" class="l"></div>
+            <div id="main2" class="r"></div>
+
+
+            <script type="text/javascript" src="../../js/echarts.min.js"></script>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart1 = echarts.init(document.getElementById('main1'));
+                var myChart2 = echarts.init(document.getElementById('main2'));
+        
+                // 指定图表的配置项和数据
+                var option1 = {
+                    title: {
+                        text: '疫苗名称——数量',
+                        textStyle: {
+                            color: '#333',
+                            fontSize: 25,
+                        }
+                    },
+                    tooltip: {},
+                    legend: {
+                        data:['数量'],
+                        left: "right",
+                        textStyle: {
+                            color: '#808080'
+                        },
+                        
+                    },
+                    xAxis: {
+                        data: ["减毒疫苗","腺病毒载体疫苗","核酸疫苗"," 灭活疫苗","COVID-19"],
+                        axisLabel: {
+                            textStyle: {
+                                color: '#808080'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        axisLabel: {
+                            textStyle: {
+                                color: '#808080'
+                            }
+                        }
+                    },
+                    series: [{
+                        name: '数量',
+                        type: 'bar',
+                        data: [250, 150, 400, 500, 420],
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#83bff6'},
+                                    {offset: 0.5, color: '#188df0'},
+                                    {offset: 1, color: '#188df0'}
+                                ]
+                            )
+                        },
+                        emphasis: {
+                            itemStyle: {
+                                color: new echarts.graphic.LinearGradient(
+                                    0, 0, 0, 1,
+                                    [
+                                        {offset: 0, color: '#2378f7'},
+                                        {offset: 0.7, color: '#2378f7'},
+                                        {offset: 1, color: '#83bff6'}
+                                    ]
+                                )
+                            }
+                        }
+                    }]
+
+
+                };
+                
+                var option2 = {
+                    title: {
+                        text: '来源地——数量',
+                        left: 'center',
+                        textStyle: {
+                            color: '#333'
+                        }
+                    },
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        left: 'left',
+                        textStyle: {
+                            color: '#808080'
+                        }
+                    },
+                    series: [
+                        {
+                            name: '疫苗数量',
+                            type: 'pie',
+                            radius: '50%',
+                            textStyle: {
+                                color: '#808080'
+                            },
+                            data: [
+                                {value: 250, name: '减毒疫苗'},
+                                {value: 150, name: '腺病毒载体疫苗'},
+                                {value: 400, name: '核酸疫苗'},
+                                {value: 500, name: '灭活疫苗'},
+                                {value: 420, name: 'COVID-19'},
+                            ],
+                            
+                            emphasis: {
+                                itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }
+                    ]
+                };
+                
+
+
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart1.setOption(option1);
+                myChart2.setOption(option2);
+            </script>
+
+
+        </div>
+    </div>
+</body>
+</html>
